@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+ruby '2.3.1'
+gem 'twilio-ruby', '~> 5.10.2'
+gem 'forecast_io'
+gem 'nokogiri'
+gem 'pry'

@@ -1,0 +1,40 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.2)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
+    forecast_io (2.0.2)
+      faraday
+      hashie
+      multi_json
+    hashie (3.5.7)
+    jwt (2.1.0)
+    method_source (0.9.0)
+    mini_portile2 (2.3.0)
+    multi_json (1.13.1)
+    multipart-post (2.0.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    twilio-ruby (5.10.2)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  forecast_io
+  nokogiri
+  pry
+  twilio-ruby (~> 5.10.2)
+
+RUBY VERSION
+   ruby 2.3.1p112
+
+BUNDLED WITH
+   1.15.3
