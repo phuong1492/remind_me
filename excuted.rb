@@ -1,5 +1,6 @@
 require "forecast_io"
 require "twilio-ruby"
+require "chatwork"
 require "pry"
 # Get weather info
 ForecastIO.configure do |c|
@@ -15,11 +16,16 @@ def get_today_weather
   if chance_of_rain > 1
     return "#{summary}. Please bring umbrella!".upcase
   else
-    nil
+    return "#{summary}[hr]#{chance_of_rain}"
   end
 end
 
 def get_train_status
+end
+
+def send_chatwork message_body
+  ChatWork.api_key = ENV["CHATWORK_KEY"]
+  ChatWork::Message.create room_id: "45438008", body: message_body
 end
 
 def send_sms message_body
@@ -33,4 +39,4 @@ def send_sms message_body
   )
 end
 
-send_sms get_today_weather()
+send_chatwork get_today_weather()

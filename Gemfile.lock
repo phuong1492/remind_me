@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    chatwork (0.4.1)
+      faraday (~> 0.9)
     coderay (1.1.2)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
@@ -28,6 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chatwork
   forecast_io
   nokogiri
   pry
